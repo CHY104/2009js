@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    var arr = new Array()
+    function  Person(name,sex,age){
+       this.name = name
+       this.sex = sex
+       this.age = age
+    }
+
+
+    Person.prototype.name = "常洪阳"
+    Person.prototype.age = 19
+    Person.prototype.sex = 'girl'
+    var p1 = new Person();
+     console.log(p1.name);
+     console.log(p1.age);
+     console.log(p1.sex);
+
+
+     var p2 = new Person("啧啧啧","w",15);
+     console.log(p2);
+
+</script>

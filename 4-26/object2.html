@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    var obj = {}
+    var obj = new Object()
+    obj.name = "songlamei"
+    obj.age = 18
+    obj.sex = "不明"
+    console.log(obj);
+
+    // 创建对象的方式
+
+    // 1 从构造函数 new
+    function Person(name,age){
+       this.name = name
+       this.age = age
+    }
+
+    var p1 = new Person('常洪阳',18)
+    var p2 = new Person('ddsdd',78)
+    console.log(p1);
+    console.log(p2);
+
+    // 2. 对象的字面量{}
+    var obj1 = {}
+    var obj2 = {
+        color : "red",
+        width : "100px"
+    }
+
+    obj2.hello = function(){
+        alert('hello world')
+    }
+    console.log(obj2);
+    console.log(obj2.color);
+</script>

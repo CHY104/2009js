@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    var arr = [11, 22, 22, 55, 66, 11, 88, 66, 77, 66]
+  
+
+    // 封装成函数的格式
+    function getPos(arr, x) {
+        var pos = [];
+        arr.forEach(function (v, k) {
+            if (v == x) {
+                pos.push(k)
+            }
+        })
+        return pos;
+    }
+
+    console.log(getPos(arr,22));
+
+    // arr.forEach(function (v, k) {
+    //     if (v == 66) {
+    //         console.log(k);
+    //     }
+    // })
+
+
+    //    求数组的he
+    //   第一种方法
+    var sum = 0
+    arr.forEach(function (v) {
+        sum += v
+    })
+    console.log(sum);
+
+    //第二种方法 
+    // var sum = 0;
+    // function sumArr(arr) {
+    //     return eval(arr.join("+"));
+    // }
+    // sum = sumArr(arr);
+    // console.log(sum);
+
+    //第三种方法 
+    // var sum = arr.reduce(function (a, b) {
+    //     return a + b;
+    // });
+    // console.log(sum);
+
+    //  移除数组 arr 中的所有值等于 22 的元素，不要直接修改数组 arr，结果返回新的数组
+    // arr.splice(1,2)
+    // console.log(arr);
+
+    // 移除数组 arr 中的所有值等于 22 的元素，直接在给定的 arr 数组上进行操作，并将结果返回。
+    // 	统计数组 arr 中值等于 66 的元素出现的次数
+    var count = 0
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] == 66) {
+            count++;
+        }
+    }
+    console.log(count);
+
+
+
+    //第一种
+    function $(param) {
+        var obj = null;
+        if (param.substr(0, 1) == "#") {
+            obj = document.querySelector(param)
+        } else if (param.substr(0, 1) == ".") {
+            obj = document.querySelectorAll(param)
+        } else {
+            obj = document.querySelectorAll(param)
+        }
+
+
+        obj.onn = function (event, fn) {
+            obj.addEventListener(event, fn)
+
+        }
+        return obj;
+    }
+
+    // $("#p1").onn('click', function () {
+    //     alert(123)
+    // })
+
+
+    // var a = $("#p1")
+    // console.log(a);
+
+
+    //第二种
+
+    var $ = function (str) {
+        var element = null;
+        if (str.length > 0) {
+            switch (str[0]) {
+                case '.':
+                    element = document.getElementsByClassName(str.substr(1, str.length - 1));
+                    break;
+                case '#':
+                    element = document.getElementById(str.substr(1, str.length - 1))
+                    break;
+                default:
+                    element = document.getElementsByTagName(str);
+                    break;
+            }
+        }
+        element.on = function (type, listener) {
+            element.addEventListener(type, listener);
+        }
+        return element;
+    }
+
+</script>
