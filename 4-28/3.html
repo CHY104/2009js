@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>解构赋值</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+//   let [a,b,c] = [11,12,13]
+//   console.log(a); //11
+//   console.log(b); //12
+//   console.log(c);  //13
+
+//   let [x,y,z] = []
+//   console.log(x,y,z);  //返回undefined
+
+//   let [x,y,z] = [1,2,3,4]
+//   console.log(x,y,z); //1 2 3
+
+// let [a,[[b],c]] = [1,[[2],3]]
+// console.log(b);   //2
+
+// let [a,[b],d] = [1,[2,3],4]
+// console.log(a); //1
+// console.log(b);  //2
+// console.log(d);  //4
+
+
+// let {a = "滴滴滴",b,c} = {a:"常洪阳", b:1212}
+// console.log(a);  //常洪阳
+// console.log(b);  //1212
+
+
+// let {a,b} = {b:"11",a:"12"}
+// console.log(a,b); //12   11  根据属性找，不根据顺序
+
+// let obj = {first: 'hello',last : 'world'}
+// let {first: f,last :l} = obj
+// console.log(obj);    //first:hello   last:world
+
+// 对象的解构也可以指定默认值
+// var {x = 3} = {}
+// console.log(x);
+
+let {x,y = 5} = {x:1,y:8}
+console.log(x,y);   //1   8
+
+</script>
