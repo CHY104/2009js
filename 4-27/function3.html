@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // function test() {
+    //     var uname = "zhangsan"
+    // }
+    // console.log(uname);   //uname is not defined
+
+    var bbb = 'Hello World'
+    function test() {
+        console.log(111);
+        function fn() {
+            console.log(bbb);
+        }
+        return fn
+    }
+    // test()  //111
+    test()() //111  、 Hello World
+</script>

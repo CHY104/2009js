@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    var obj1 = {
+        name : "张三"
+    }
+
+    // 两个变量同时改变
+    var obj2 = obj1  //将obj1的引用 赋值给obj2
+    obj2.age = 15
+    var obj3 = obj2
+    obj3.sex = "boy"
+    console.log("obj1",obj1);
+    console.log("obj2",obj2);
+    console.log("obj3",obj3);
+    // 改变的都是obj1
+
+</script>
