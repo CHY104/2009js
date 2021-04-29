@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+
+    function abc(name="noname",age = 0){
+        console.log(name,age);
+    }
+    abc()
+    abc('zhangsan',18)
+
+    function aa(){
+        console.log(arguments[0],arguments[1],arguments[2]);
+    }
+    aa(12,12,12,12)
+
+    // 找到多余的参数输出
+    function test1(...args){
+        console.log(args);
+    }
+    test1(1,2,3,4)
+
+    // 有形参  又有rest参数
+    function test2(a, ...args) {
+        console.log(args);
+    }
+    test2(11, 22, 33)   //22 33
+
+    // 使用arguments
+    function test3() {
+        console.log(arguments);
+    }
+    test3(11, 22, 33)
+
+
+    // 箭头语法
+    // let f = v=>v
+    // 等价于
+    let f = function (v) { return v }
+    console.log(f);
+
+    
+</script>
