@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let obj1 = {
+        name:'chy',
+        age : 19,
+        sex : '女',
+    }
+    // console.log(obj1);
+
+    let obj2 = new Object()
+    obj2.name = "zhangsan"
+    obj2.age = 11
+    obj2.sex = "M"
+    // console.log(obj2);
+
+    // Object.assign的用法 通过复制一个或多个对象来创建一个新的对象
+    // let obj3 = Object.assign(obj1,obj2)
+    // console.log(obj3);
+
+    // Object.create 使用指定的原型对象和属性创建一个新对象
+    // let obj3 = Object.create(obj2)
+    // obj3.name = "zz"
+    // obj3.age = 45
+    // obj3.sex1 = "buzhi"
+    // console.log(obj3);
+
+    // Object.defineproperty() 给对象添加属性并指定该属性的特征
+    // Object.defineProperty(obj1,'address',{
+    //        value : "河北",
+    //        writable:true,
+    //        enumerable :true,
+    //        configurable:true,
+    // })
+    // console.log(obj1);
+
+
+    // Object.values()  返回给定对象自身可枚举值的数组。
+    // console.log(Object.values(obj2));
+
+
+    //Object.entries()  返回给定对象自身可枚举属性的键值对  返回数组
+    // console.log(Object.entries(obj1));
+
+
+    // Object.getOwnPropertyDescriptor() 返回对象属性配置
+//     let obj3 = {
+//         address : "afuhan"
+//     }
+//    let info = Object.getOwnPropertyDescriptor(obj3,'address')
+//    console.log(info.configurable);
+//    console.log(info.value);
+   
+   Object.defineProperty(obj1,"email",{
+       value : "zhangsan@qq.com",
+       writable : true,   
+       enumerable : true,
+       configurable : true
+   })
+//    console.log(obj1);
+   Object.defineProperty(obj1,"address",{
+       get:function(){
+           console.log("触发了get方法");
+       },
+       set:function(){
+           console.log("触发了set方法");
+       }
+   })
+//    读address属性
+obj1.address
+//  写address属性
+obj1.address = "河北"
+
+// 枚举对象的属性
+for(k in obj1){
+    console.log(k,obj1[k]);
+}
+
+// 获取对象中的键 （属性名）
+let karr = Object.keys(obj1)
+console.log(karr);
+
+// 获取对象的键值对  返回一个数组
+let kv = Object.entries(obj1)
+console.log(kv);
+
+// 获取对象的key对应的值
+let varr = Object.values(obj1)
+console.log(varr);
+
+// 删除对象中的属性
+console.log("删除前:  ",obj1);
+delete obj1.name
+console.log("删除后:  ",obj1);
+</script>
