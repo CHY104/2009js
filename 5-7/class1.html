@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    class A {
+        // 构造函数，用来初始化数据
+        constructor(name,age){
+             this.name = name
+             this.age = age
+        }
+    }
+    let obj1 = new A("yy",19)
+    console.log(obj1);
+
+
+    // 静态属性和方法
+    class Foo{
+        // 构造方法
+       constructor(){
+
+       }
+    //    定义一个静态方法，该方法使用类名调用 类名.方法名() 不需要实例化
+       static hello(){
+           console.log(1111);
+       }
+    //    定义一个普通方法  通过实例访问 实例.方法名()
+       haha(){
+           console.log(2222);
+       }
+    }
+    const obj3 = new Foo()
+    Foo.hello()
+    obj3.haha()
+</script> 

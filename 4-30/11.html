@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // 5题  undefined Window
+        function a() {
+            var user = "张三";
+            console.log(this.user);
+            console.log(this);
+        }
+        a();
+
+        // 9题  1
+        // var fun = function () {
+        //     console.log(1);
+        // }
+        // function fun() {
+        //     console.log(2);
+        // }
+        // fun();
+
+        // 10题  Window
+        // function f() {
+        //     console.log(this);
+        // }
+        // f();
+
+        // 11题 hello
+        // str = "hello"
+        // var str;
+        // console.log(str);
+
+        // 13题   sayHi is not a function
+        // sayHi()
+        // var sayHi = function(){
+        //     console.log("Hi");
+        // }
+
+        // 14题  undefined
+        // function f(){
+        //     console.log(num);
+        //     var num = 1
+        // }
+        // f()
+
+        // 15题  1
+        // var a = {"x":0}
+        // var b = a;
+        // a.x = 1
+        // console.log(b.x);
+
+        // 17题  true
+        // function Foo() {}
+        // var f1 = new Foo()
+        // console.log(f1 instanceof Foo);
+
+        // 20题 Hello  上下调用 结果一样
+        // say()
+        // function say(){
+        //     console.log("Hello");
+        // }
+
+        // 21题   undefined 0 0 0
+        // function func(n,o){
+        //     console.log(o);
+        //     return{
+        //         func:function(m){
+        //             return func(m,n)
+        //         }
+        //     }
+        // }
+        // var a = func(0);a.func(1);a.func(2);a.func(3)
+
+        // 22题  undefined hello
+        // function Foo(){
+        //     console.log(a);
+        //     var a = "hello"
+        //     console.log(a);
+        // }
+        // Foo()
+
+        // 24题   //红色
+        // function createCar(color,wheel){
+        //     var obj = new Object;
+        //     obj.color = color
+        //     obj.wheel = wheel
+        //     return obj;
+        // }
+        // var cat1 = createCar("红色","4")
+        // console.log(cat1.color);
+
+        // 25题  undefined change
+        // var b;
+        // function fun(){
+        //     b = "change";
+        // }
+        // console.log(b);
+        // fun()
+        // console.log(b);
+
+        // 26题   2
+        // var num = 1
+        // function f(){
+        //     var num = 2
+        //     return num
+        // }
+        // console.log(f());
+    </script>
+</body>
+
+</html>
