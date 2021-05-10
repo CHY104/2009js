@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let arr = [11,22,33,44,55]
+    console.log(Array.prototype);
+    arr.forEach(function(v,k){
+       console.log(k,v);
+    })
+    console.log(Object.prototype);
+    let obj1 = {
+        name: "zhangsan",
+        age : 19,
+        sex : "nv"
+    }
+    for(var v in obj1){
+        console.log(v);
+    }
+
+    // map方法
+    let m1 = new Map()
+    m1.set('xxx','111')
+    m1.set('yyy','222')
+    m1.set('zzz','333')
+    console.log(m1);
+    for( v of m1){
+        console.log(v);
+    }
+
+  
+
+    // set方法
+    let s1 = new Set()
+    s1.add('a')
+    s1.add('b')
+    s1.add('c')
+    console.log(s1.size);
+    for(v of s1){
+        console.log(v);
+    }
+</script>
