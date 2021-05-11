@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery.js"></script>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    var str = ""
+ new Promise(function(resolve,reject){
+    //  第一个密码
+    $.ajax({
+        url: "http://vue.api.comcto.com/api/password1.php",
+        method : 'get',
+        success:function(res){
+            console.log("接收到的数据：",res);
+            resolve(res)
+        }
+    }).then(function(data){
+        console.log("then收到的数据：",data);
+        str += data
+        // 第二个密码
+        new Promise(function(resolve,reject){
+
+        })
+    })
+ })
+</script>
