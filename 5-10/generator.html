@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生成器函数</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    function * f1(){
+        yield "常洪阳"
+        yield "张新学"
+        yield "开开心心"
+    }
+    let res = f1()
+    console.log(res.next());
+    console.log(res.next());
+    console.log(res.next());
+    for (v of f1()){
+        console.log(v);
+    }
+
+    function * hello(){
+        let a = 11
+        let b = 22
+        let c = function(){
+            console.log("hello world");
+        }
+        yield a+b
+        yield a++
+        yield c
+    }
+    let res2 = hello();
+    console.log(res2.next().value);
+    console.log(res2.next().value);
+    res2.next().value()
+</script>
