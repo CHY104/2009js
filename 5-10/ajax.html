@@ -2,9 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <script src="/jquery.js"></script>
 </head>
 <body>
-$END$
+
 </body>
 </html>
+<script>
+    var pass = ""
+    // 第一位密码
+    $.ajax({
+        url: "http://vue.api.comcto.com/api/password1.php",
+        method : 'get',
+        success:function (res) {
+        pass += res
+            console.log("第一位:",res)
+        }
+    })
+
+    // 第二位密码
+    $.ajax({
+        url: "http://vue.api.comcto.com/api/password2.php",
+        method : 'get',
+        success:function (res) {
+           pass += res
+            console.log("第二位:",res)
+        }
+    })
+
+    // 第三位密码
+    $.ajax({
+        url: "http://vue.api.comcto.com/api/password3.php",
+        method : 'get',
+        success:function (res) {
+           pass += res
+            console.log("第三位:",res)
+        }
+    })
+
+    // 第四位密码
+    $.ajax({
+        url: "http://vue.api.comcto.com/api/password4.php",
+        method : 'get',
+        async:false,
+        success:function (res) {
+           pass += res
+            console.log("第四位:",res)
+        }
+    })
+</script>
